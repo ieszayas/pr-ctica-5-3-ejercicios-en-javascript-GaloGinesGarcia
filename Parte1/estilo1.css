@@ -1,0 +1,34 @@
+form{
+    text-align: center;
+    align-items: center;
+}
+div{
+    padding: 10px;
+}
+
+div.contenedorPrincipal{
+    padding: 20px; 
+    margin-top: 50px; 
+    align-items: center;
+}
+
+.mensajeEmergente,
+.mensajeEmergenteDos,
+.mensajeEmergenteTres {
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.campoError{
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
