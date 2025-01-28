@@ -20,14 +20,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
              
+            <div id="reloj" class="reloj"></div> 
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#formulario">Formulario</a></li>
                     <li class="nav-item"><a class="nav-link" href="#tabla">Tabla</a></li>
                     <li class="nav-item"><a class="nav-link" href="#carrusel">Galería</a></li>
-                    <li class="nav-item">
-                        <div id="reloj" class="reloj"></div> 
-                    </li>
                     <li class="nav-item"><button type="button" onclick="cambiarModo()" id="modoBtn" class="btn btn-primary w-100">Nocturno</button></li>
                 </ul>
             </div>
@@ -76,7 +75,9 @@
                             <option value="consultoria">Senior</option>
                         </select>
                     </div>
+                    
                     <div class="mb-3">
+                        
                         <label class="form-label">Lenguajes de programación:</label>
                         <div class="form-check">
                             <input type="checkbox" id="java" class="form-check-input">
@@ -103,8 +104,13 @@
                 </form>
             </div>
             <div class="col-md-7">
+                
                 <section id="tabla" class="mb-5">
+                    
                     <h2 class="mb-4 text-center">Lenguajes más demandados en España</h2>
+                    <div class="mb-3">
+                        <input type="text" id="busquedaLenguaje" class="form-control" placeholder="Buscar lenguaje..." onkeyup="filtrarLenguajes()">
+                    </div>
                     <div class="table-responsive tablaCustom">
                         <table class="table table-striped table-hover">
                             <thead class="table-dark">
@@ -151,3 +157,106 @@
     </footer>
 </body>
 </html>
+
+<!--
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Mejorada</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo1.css">
+    <link rel="stylesheet" href="estilo1Botstrap.css">
+    <script>
+        // Función para filtrar los lenguajes en la tabla
+        function filtrarLenguajes() {
+            const input = document.getElementById("busquedaLenguaje").value.toLowerCase();
+            const filas = document.querySelectorAll("#tablaLenguajes tbody tr");
+
+            filas.forEach(fila => {
+                const lenguaje = fila.querySelector("td:nth-child(2)").textContent.toLowerCase();
+                if (lenguaje.includes(input)) {
+                    fila.style.display = ""; // Mostrar fila
+                } else {
+                    fila.style.display = "none"; // Ocultar fila
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <script src="script1.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Web Mejorada</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="reloj" class="reloj"></div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#formulario">Formulario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tabla">Tabla</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#carrusel">Galería</a></li>
+                    <li class="nav-item"><button type="button" onclick="cambiarModo()" id="modoBtn" class="btn btn-primary w-100">Nocturno</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-5 mb-5" id="formulario">
+                <h2 class="mb-4 text-center">Formulario de Contacto</h2>
+                 Formulario existente 
+            </div>
+            <div class="col-md-7">
+                <section id="tabla" class="mb-5">
+                    <h2 class="mb-4 text-center">Lenguajes más demandados en España</h2>
+
+                     Barra de búsqueda 
+                    <div class="mb-3">
+                        <input type="text" id="busquedaLenguaje" class="form-control" placeholder="Buscar lenguaje..." onkeyup="filtrarLenguajes()">
+                    </div>
+
+                     Tabla de lenguajes 
+                    <div class="table-responsive tablaCustom">
+                        <table id="tablaLenguajes" class="table table-striped table-hover">
+                            <thead class="table-dark">
+                                <tr><th>#</th><th>Lenguaje</th><th>Porcentaje</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>1</td><td>Java</td><td>20%</td></tr>
+                                <tr><td>2</td><td>Python</td><td>17%</td></tr>
+                                <tr><td>3</td><td>React (JavaScript)</td><td>13%</td></tr>
+                                <tr><td>4</td><td>Angular (JavaScript)</td><td>12%</td></tr>
+                                <tr><td>5</td><td>JavaScript</td><td>10%</td></tr>
+                                <tr><td>6</td><td>.NET</td><td>8%</td></tr>
+                                <tr><td>7</td><td>NodeJS</td><td>7%</td></tr>
+                                <tr><td>8</td><td>C#</td><td>5%</td></tr>
+                                <tr><td>9</td><td>PHP</td><td>5%</td></tr>
+                                <tr><td>10</td><td>Ruby on Rails</td><td>3%</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                 Galería existente 
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>2025 Mi Página Web.</p>
+    </footer>
+</body>
+
+</html>
+
+
+-->

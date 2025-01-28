@@ -52,18 +52,17 @@ button{
 }
 
 .reloj {
-    font-size: 0.875rem; 
+    font-size: 3rem; 
     font-weight: bold;
     color: #fff; 
     text-align: center;
-    margin-top: 8px; 
+    margin-left: 32%;
+    margin-top: 10px; 
     padding: 4px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 1);
 }
 
-.navbar-custom .reloj {
-    display: inline-block; 
-    margin: auto; 
-}
+
 
 .campoError{
     border: 2px solid red;

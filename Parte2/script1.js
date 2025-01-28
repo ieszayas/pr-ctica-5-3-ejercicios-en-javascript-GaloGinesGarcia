@@ -123,6 +123,28 @@ function actualizarReloj() {
 }
 
 
+
+function filtrarLenguajes() {
+    
+    let input = document.getElementById("busquedaLenguaje").value.toLowerCase();
+    
+    let filas = document.querySelectorAll("#tabla tbody tr");
+
+    
+    filas.forEach(function(fila) {
+        
+        let lenguaje = fila.cells[1].textContent.toLowerCase();
+        
+        
+        if (lenguaje.includes(input)) {
+            fila.style.display = "";
+        } else {
+            fila.style.display = "none";
+        }
+    });
+}
+
+
 setInterval(actualizarReloj, 1000);
 
 
