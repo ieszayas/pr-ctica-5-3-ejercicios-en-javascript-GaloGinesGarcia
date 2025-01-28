@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parte 1</title>
+    <link rel="stylesheet" href="estilo1.css">
+</head>
+
+<body>
+    <script src="script1.js"></script>
+    <form>
+        <div id="mensajeEmergente" class="mensajeEmergente">
+            Todos los campos han sido eliminados.
+        </div>
+        <div id="mensajeEmergenteDos" class="mensajeEmergenteDos">
+            Formulario enviado correctamente.
+        </div>
+        <div id="mensajeEmergenteTres" class="mensajeEmergenteTres">
+            Campos incorrectos.
+        </div>
+        <div class="contenedorPrincipal">
+
+            <div>
+                <input type="text" id="nombrePersona" name="nombre" placeholder="Escribe tu nombre" required>
+            </div>
+            <div>
+                <input type="text" id="apellidoPersona" name="apellido" placeholder="Escribe tu apellido" required>
+            </div>
+            <div>
+                <input type="date" id="fechaPersona" name="fecha de nacimiento" required>
+            </div>
+            <div>
+                <input type="text" id="numeroPersona" name="numero" placeholder="111-222-333" required>
+            </div>
+            <div>
+                <input type="button" onclick="borrarCamposFormulario('nombrePersona', 'apellidoPersona', 'fechaPersona', 'numeroPersona')" id="botonBorrar" name="boton" value="Borrar Formulario">
+            </div>
+            <div>
+                <input type="button" onclick="enviarDatosFormulario('nombrePersona', 'apellidoPersona', 'fechaPersona', 'numeroPersona')" id="botonEnviar" name="boton" value="Enviar Formulario">
+            </div>
+
+        </div>
+    </form>
+</body>
+
+</html>
